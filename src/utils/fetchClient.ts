@@ -1,7 +1,9 @@
 /* eslint-disable */
 import { Department, Employee } from '../types/types';
 
-const BASE_URL = 'http://localhost:3006';
+const BASE_URL = 'https://crud-server-0uze.onrender.com';
+// 'https://crud-server-0uze.onrender.com',
+// http://localhost:3006
 
 type RequestMethod = 'GET' | 'POST' | 'PATCH' | 'DELETE';
 
@@ -20,7 +22,6 @@ function request<T>(
   }
 
   return fetch(BASE_URL + url, options).then((response) => {
-
     if (!response.ok) {
       throw new Error();
     }
